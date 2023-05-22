@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/moyuking-lowcode-backend/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/moyuking-lowcode-backend/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/moyuking-lowcode-backend",
+  "projects": {
+    "moyuking-lowcode-backend": {
+      "type": "application",
+      "root": "apps/moyuking-lowcode-backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/moyuking-lowcode-backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/moyuking-lowcode-backend/tsconfig.app.json"
+      }
+    },
+    "devops": {
+      "type": "application",
+      "root": "apps/devops",
+      "entryFile": "main",
+      "sourceRoot": "apps/devops/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/devops/tsconfig.app.json"
+      }
+    },
+    "comm": {
+      "type": "library",
+      "root": "libs/comm",
+      "entryFile": "index",
+      "sourceRoot": "libs/comm/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/comm/tsconfig.lib.json"
+      }
+    }
+  }
+}
